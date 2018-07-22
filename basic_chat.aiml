@@ -1,0 +1,39 @@
+<aiml version="1.0.1" encoding="UTF-8">
+    <category>
+        <pattern>HELLO</pattern>
+        <template>
+            Well, hello!
+        </template>
+    </category>
+    
+    <category>
+        <pattern>WHO ARE YOU</pattern>
+        <template>
+            I'm a bot, alice!
+        </template>
+    </category>
+    
+    <category>
+        <pattern>WHO IS *</pattern>
+        <template>
+           Well, i have to search about <star/>
+	    <system> python3 /home/appin/Desktop/AIML_Tutorial/wiki.py "<star/>"</system>
+	</template>
+    </category>
+   
+    <category>
+        <pattern>OPEN *</pattern>
+        <template>
+           Well, I'm trying to open! 
+	    <system> firefox "<star/>"</system>
+	</template>
+    </category>
+    
+    <category>
+        <pattern>SEARCH ON YOUTUBE *</pattern>
+        <template>
+           Well, i'm trying to search! <star/>
+	    <system> firefox  "https://www.youtube.com/results?search_query=<star/>"</system>
+	</template>
+    </category>
+</aiml>
